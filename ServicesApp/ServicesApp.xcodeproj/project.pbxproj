@@ -14,6 +14,7 @@
 		2CAF71E32003185B00C1C013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF71E12003185B00C1C013 /* LaunchScreen.storyboard */; };
 		2CAF71EE2003185B00C1C013 /* ServicesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF71ED2003185B00C1C013 /* ServicesAppTests.swift */; };
 		2CAF71F92003185B00C1C013 /* ServicesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF71F82003185B00C1C013 /* ServicesAppUITests.swift */; };
+		2CAF721220032A9B00C1C013 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CAF721120032A9B00C1C013 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2CAF71F42003185B00C1C013 /* ServicesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF71F82003185B00C1C013 /* ServicesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAppUITests.swift; sourceTree = "<group>"; };
 		2CAF71FA2003185B00C1C013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAF721120032A9B00C1C013 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAF721220032A9B00C1C013 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				2CAF71EC2003185B00C1C013 /* ServicesAppTests */,
 				2CAF71F72003185B00C1C013 /* ServicesAppUITests */,
 				2CAF71D62003185B00C1C013 /* Products */,
+				2CAF721020032A9B00C1C013 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				2CAF71FA2003185B00C1C013 /* Info.plist */,
 			);
 			path = ServicesAppUITests;
+			sourceTree = "<group>";
+		};
+		2CAF721020032A9B00C1C013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CAF721120032A9B00C1C013 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,11 @@
 					2CAF71D42003185B00C1C013 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2CAF71E82003185B00C1C013 = {
 						CreatedOnToolsVersion = 9.2;
@@ -429,7 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29FG86FW8;
 				INFOPLIST_FILE = ServicesApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasaqtec.Mobile.ServicesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S29FG86FW8;
 				INFOPLIST_FILE = ServicesApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rasaqtec.Mobile.ServicesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
